@@ -4,12 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
     outline: solid 1px magenta
-}
+} */
 
 @layer base {
     html {
-        @apply text-sm;
+        @apply text-sm bg-light-gray;
+    }
+
+    h3 {
+        @apply font-extrabold
     }
 }
