@@ -1,6 +1,7 @@
 import useAxiosFetch from '../hooks/useAxiosFetch';
 import {baseUrl} from '../baseUrl';
-import HomeLayout from '../components/HomeLayout';
+import RegionDropdown from '../components/RegionDropdown';
+import Header from '../components/Header';
 
 const Home = () => {
   const urlAllCountries = `${baseUrl}/all`;
@@ -9,11 +10,16 @@ const Home = () => {
 
   return (
     <>
-      <HomeLayout>
-        <section>
-          <input placeholder='Search for a country...' />
+      <Header />
+      <main>
+        <section className='flex'>
+          <input
+            placeholder='Search for country...'
+            className='block md:inline-block'
+          />
+          <RegionDropdown />
         </section>
-      </HomeLayout>
+      </main>
     </>
   );
 };
