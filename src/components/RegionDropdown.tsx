@@ -1,5 +1,6 @@
 import {Listbox} from '@headlessui/react';
 import {regions} from '../data/data';
+import {Link} from 'react-router-dom';
 
 interface Props {
   selectedRegion: string;
@@ -16,9 +17,13 @@ const RegionDropdown = ({selectedRegion, setSelectedRegion}: Props) => {
     >
       <Listbox.Button>{selectedRegion}</Listbox.Button>
       <Listbox.Options className='absolute left-0 bg-white'>
-        {regions.map((regionName, idx) => (
-          <Listbox.Option key={`region-${idx}`} value={regionName}>
-            {regionName}
+        {regions.map((regionName) => (
+          <Listbox.Option key={regionName} value={regionName}>
+            {regionName === 'All' ? (
+              <Link to='/'>{regionName}</Link>
+            ) : (
+              <Link to={`/region/${regionName}`}>{regionName}</Link>
+            )}
           </Listbox.Option>
         ))}
       </Listbox.Options>
