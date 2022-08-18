@@ -1,11 +1,12 @@
-import {useState} from 'react';
 import {Listbox} from '@headlessui/react';
+import {regions} from '../data/data';
 
-const regions = ['Americas', 'Oceania', 'Europe', 'Africa', 'Asia'];
+interface Props {
+  selectedRegion: string;
+  setSelectedRegion: any;
+}
 
-const RegionDropdown = () => {
-  const [selectedRegion, setSelectedRegion] = useState(regions[0]);
-
+const RegionDropdown = ({selectedRegion, setSelectedRegion}: Props) => {
   return (
     <Listbox
       value={selectedRegion}
@@ -14,7 +15,7 @@ const RegionDropdown = () => {
       className='relative'
     >
       <Listbox.Button>{selectedRegion}</Listbox.Button>
-      <Listbox.Options className='absolute left-0'>
+      <Listbox.Options className='absolute left-0 bg-white'>
         {regions.map((regionName, idx) => (
           <Listbox.Option key={`region-${idx}`} value={regionName}>
             {regionName}

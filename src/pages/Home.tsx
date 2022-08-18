@@ -3,8 +3,14 @@ import {baseUrl} from '../data/data';
 import RegionDropdown from '../components/RegionDropdown';
 import Header from '../components/Header';
 import CountryCard from '../components/CountryCard';
+import SearchBar from '../components/SearchBar';
 
-const Home = () => {
+interface Props {
+  selectedRegion: string;
+  setSelectedRegion: any;
+}
+
+const Home = ({selectedRegion, setSelectedRegion}: Props) => {
   const urlAllCountries = `${baseUrl}/all`;
   const {data, error, isLoading} = useAxiosFetch(urlAllCountries);
   // console.log('data:', data);
@@ -42,11 +48,11 @@ const Home = () => {
       <Header />
       <main className='flex flex-col items-center'>
         <section id='nav-section' className='flex'>
-          <input
-            placeholder='Search for country...'
-            className='block md:inline-block'
+          <SearchBar />
+          <RegionDropdown
+            selectedRegion={selectedRegion}
+            setSelectedRegion={setSelectedRegion}
           />
-          <RegionDropdown />
         </section>
         <section
           id='countries-section'
