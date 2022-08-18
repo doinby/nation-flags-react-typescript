@@ -1,5 +1,5 @@
 import {useParams} from 'react-router-dom';
-import {baseUrl} from '../baseUrl';
+import {baseUrl} from '../data/data';
 import useAxiosFetch from '../hooks/useAxiosFetch';
 
 const Country = () => {

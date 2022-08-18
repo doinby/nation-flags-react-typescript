@@ -1,5 +1,5 @@
 import useAxiosFetch from '../hooks/useAxiosFetch';
-import {baseUrl} from '../baseUrl';
+import {baseUrl} from '../data/data';
 import RegionDropdown from '../components/RegionDropdown';
 import Header from '../components/Header';
 

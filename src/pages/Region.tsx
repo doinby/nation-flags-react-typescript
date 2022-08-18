@@ -1,6 +1,6 @@
 import {useParams} from 'react-router-dom';
 import useAxiosFetch from '../hooks/useAxiosFetch';
-import {baseUrl} from '../baseUrl';
+import {baseUrl} from '../data/data';
 
 const Region = () => {
   const {regionId} = useParams();
