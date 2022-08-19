@@ -1,7 +1,7 @@
 import useAxiosFetch from '../hooks/useAxiosFetch';
 import {baseUrl} from '../data/data';
 import RegionDropdown from '../components/RegionDropdown';
-import Header from '../components/Header';
+import HomeLayout from '../components/HomeLayout';
 import CountryCard from '../components/CountryCard';
 import SearchBar from '../components/SearchBar';
 
@@ -45,15 +45,10 @@ const Home = ({selectedRegion, setSelectedRegion}: Props) => {
 
   return (
     <>
-      <Header />
-      <main className='flex flex-col items-center'>
-        <section id='nav-section' className='flex'>
-          <SearchBar />
-          <RegionDropdown
-            selectedRegion={selectedRegion}
-            setSelectedRegion={setSelectedRegion}
-          />
-        </section>
+      <HomeLayout
+        selectedRegion={selectedRegion}
+        setSelectedRegion={setSelectedRegion}
+      >
         <section
           id='countries-section'
           // className='container flex flex-col md:flex-row gap-16 flex-wrap justify-center'
@@ -61,7 +56,7 @@ const Home = ({selectedRegion, setSelectedRegion}: Props) => {
         >
           {data && generateCards}
         </section>
-      </main>
+      </HomeLayout>
     </>
   );
 };
