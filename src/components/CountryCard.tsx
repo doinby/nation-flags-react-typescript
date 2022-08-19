@@ -17,7 +17,7 @@ const CountryCard = ({
   idx,
 }: Props) => {
   return (
-    <article className='w-[264px] bg-[#FFF] shadow-md'>
+    <article className='bg-[#FFF] shadow-md'>
       <img src={flagUrl} alt={`Flag of ${name}`} />
       <div className='px-8 py-10'>
         <h3 className='pb-4'>{name}</h3>

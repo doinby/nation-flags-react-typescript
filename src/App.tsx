@@ -1,12 +1,12 @@
 import {Route, Routes} from 'react-router-dom';
 import CountryLayout from './components/CountryLayout';
-import RegionLayout from './components/RegionLayout';
 import NotFound from './pages/404';
 import Country from './pages/Country';
 import Home from './pages/Home';
 import Region from './pages/Region';
-import {regions} from './data/data';
 import {useState} from 'react';
+import HomeLayout from './components/HomeLayout';
+import {regions} from './data/data';
 
 const App = () => {
   const [selectedRegion, setSelectedRegion] = useState(regions[0]);
@@ -14,23 +14,40 @@ const App = () => {
   return (
     <>
       <Routes>
+        {/* Index Page */}
         <Route
           path='/'
           element={
-            <Home
+            <HomeLayout
               selectedRegion={selectedRegion}
               setSelectedRegion={setSelectedRegion}
             />
           }
-        />
-        <Route path='region' element={<RegionLayout />}>
+        >
+          <Route index element={<Home />} />
+        </Route>
+
+        {/* Individual Region Page */}
+        <Route
+          path='region'
+          element={
+            <HomeLayout
+              selectedRegion={selectedRegion}
+              setSelectedRegion={setSelectedRegion}
+            />
+          }
+        >
           <Route index element={<NotFound />} />
           <Route path=':regionId' element={<Region />} />
         </Route>
+
+        {/* Individual Country Page */}
         <Route path='country' element={<CountryLayout />}>
           <Route index element={<NotFound />} />
           <Route path=':countryId' element={<Country />} />
         </Route>
+
+        {/* Error Page */}
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>

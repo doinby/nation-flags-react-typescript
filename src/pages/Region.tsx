@@ -6,7 +6,7 @@ const Region = () => {
   const {regionId} = useParams();
   const urlRegion = `${baseUrl}/region/${regionId}`;
   const {data, error, isLoading} = useAxiosFetch(urlRegion);
-  console.log('data:', data);
+  // console.log('data:', data);
 
   return <p>Individual Region {regionId}</p>;
 };

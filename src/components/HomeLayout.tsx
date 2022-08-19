@@ -1,16 +1,15 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faMoon, faSun} from '@fortawesome/free-regular-svg-icons';
-import {ReactNode} from 'react';
 import SearchBar from '../components/SearchBar';
 import RegionDropdown from '../components/RegionDropdown';
+import {Outlet} from 'react-router-dom';
 
 interface Props {
-  children?: ReactNode;
   selectedRegion: string;
-  setSelectedRegion: any;
+  setSelectedRegion: (val: string) => void;
 }
 
-const HomeLayout = ({children, selectedRegion, setSelectedRegion}: Props) => {
+const HomeLayout = ({selectedRegion, setSelectedRegion}: Props) => {
   return (
     <>
       <header className='flex justify-between shadow-md px-4 py-8'>
@@ -29,7 +28,7 @@ const HomeLayout = ({children, selectedRegion, setSelectedRegion}: Props) => {
             setSelectedRegion={setSelectedRegion}
           />
         </section>
-        {children}
+        <Outlet />
       </main>
       <footer>Footer</footer>
     </>
