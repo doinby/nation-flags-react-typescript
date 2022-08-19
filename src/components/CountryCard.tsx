@@ -1,26 +1,21 @@
 interface Props {
-  flagUrl: string;
-  name: string;
-  population: number;
-  region: [];
-  capital: [];
-  idx?: number;
-  id?: string;
+  countryData: any;
 }
 
-const CountryCard = ({
-  flagUrl,
-  name,
-  population,
-  region,
-  capital,
-  idx,
-}: Props) => {
+const CountryCard = ({countryData}: Props) => {
+  const {
+    name: {common: countryName},
+    capital,
+    population,
+    continents: region,
+    flags: {png: flagUrl},
+  } = countryData;
+
   return (
     <article className='bg-[#FFF] shadow-md'>
-      <img src={flagUrl} alt={`Flag of ${name}`} />
+      <img src={flagUrl} alt={`Flag of ${countryName}`} />
       <div className='px-8 py-10'>
-        <h3 className='pb-4'>{name}</h3>
+        <h3 className='pb-4'>{countryName}</h3>
         <p className='font-semibold'>
           Population: <span className='font-light'>{population}</span>
         </p>
