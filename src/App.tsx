@@ -5,11 +5,12 @@ import Country from './pages/Country';
 import Home from './pages/Home';
 import {useState} from 'react';
 import HomeLayout from './components/HomeLayout';
-import {regions} from './data/data';
+import {baseUrl, regions} from './data/data';
 
 const App = () => {
   const [selectedRegion, setSelectedRegion] = useState(regions[0]);
   const [isDarkMode, setDarkMode] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(selectedRegion.endpoint);
 
   return (
     <>
@@ -23,10 +24,20 @@ const App = () => {
               setSelectedRegion={setSelectedRegion}
               isDarkMode={isDarkMode}
               setDarkMode={setDarkMode}
+              setSearchQuery={setSearchQuery}
             />
           }
         >
-          <Route index element={<Home endpoint={selectedRegion.endpoint} />} />
+          <Route
+            index
+            element={
+              <Home
+                url={
+                  searchQuery === '' ? baseUrl + '/all' : baseUrl + searchQuery
+                }
+              />
+            }
+          />
         </Route>
 
         {/* Individual Country Page */}

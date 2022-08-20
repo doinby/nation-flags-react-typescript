@@ -4,12 +4,12 @@ import CountryCard from '../components/CountryCard';
 import CountryList from '../components/CountryList';
 
 interface Props {
-  endpoint: string;
+  url: string;
 }
 
-const Home = ({endpoint}: Props) => {
-  const urlFull = baseUrl + endpoint;
-  const {data, error, isLoading} = useAxiosFetch(urlFull);
+const Home = ({url}: Props) => {
+  console.log('url:', url);
+  const {data, error, isLoading} = useAxiosFetch(url);
 
   return (
     <CountryList>

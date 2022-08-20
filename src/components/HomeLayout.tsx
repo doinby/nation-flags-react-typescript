@@ -10,6 +10,7 @@ interface Props {
   setSelectedRegion: any;
   isDarkMode: boolean;
   setDarkMode: any;
+  setSearchQuery: any;
 }
 
 const HomeLayout = ({
@@ -17,16 +18,18 @@ const HomeLayout = ({
   setSelectedRegion,
   isDarkMode,
   setDarkMode,
+  setSearchQuery,
 }: Props) => {
   return (
     <>
       <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
       <main className='flex flex-col items-center'>
         <section id='nav-section' className='flex'>
-          <SearchBar />
+          <SearchBar setSearchQuery={setSearchQuery} />
           <RegionDropdown
             selectedRegion={selectedRegion}
             setSelectedRegion={setSelectedRegion}
+            setSearchQuery={setSearchQuery}
           />
         </section>
         <Outlet />

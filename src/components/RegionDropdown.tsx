@@ -6,13 +6,21 @@ interface Props {
     name: string;
   };
   setSelectedRegion: any;
+  setSearchQuery: any;
 }
 
-const RegionDropdown = ({selectedRegion, setSelectedRegion}: Props) => {
+const RegionDropdown = ({
+  selectedRegion,
+  setSelectedRegion,
+  setSearchQuery,
+}: Props) => {
   return (
     <Listbox
       value={selectedRegion}
-      onChange={setSelectedRegion}
+      onChange={(value: any) => {
+        setSelectedRegion(value);
+        setSearchQuery(value.endpoint);
+      }}
       as='div'
       className='relative'
     >
