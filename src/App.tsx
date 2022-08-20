@@ -9,6 +9,7 @@ import {regions} from './data/data';
 
 const App = () => {
   const [selectedRegion, setSelectedRegion] = useState(regions[0]);
+  const [isDarkMode, setDarkMode] = useState(false);
 
   return (
     <>
@@ -20,6 +21,8 @@ const App = () => {
             <HomeLayout
               selectedRegion={selectedRegion}
               setSelectedRegion={setSelectedRegion}
+              isDarkMode={isDarkMode}
+              setDarkMode={setDarkMode}
             />
           }
         >
