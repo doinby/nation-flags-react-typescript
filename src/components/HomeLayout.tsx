@@ -5,8 +5,10 @@ import RegionDropdown from '../components/RegionDropdown';
 import {Outlet} from 'react-router-dom';
 
 interface Props {
-  selectedRegion: string;
-  setSelectedRegion: (val: string) => void;
+  selectedRegion: {
+    name: string;
+  };
+  setSelectedRegion: any;
 }
 
 const HomeLayout = ({selectedRegion, setSelectedRegion}: Props) => {

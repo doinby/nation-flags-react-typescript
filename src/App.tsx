@@ -3,14 +3,12 @@ import CountryLayout from './components/CountryLayout';
 import NotFound from './pages/404';
 import Country from './pages/Country';
 import Home from './pages/Home';
-import Region from './pages/Region';
 import {useState} from 'react';
 import HomeLayout from './components/HomeLayout';
 import {regions} from './data/data';
 
 const App = () => {
-  const [selectedRegion, setSelectedRegion] = useState(regions[0].name);
-  const [endpoint, setEndpoint] = useState(regions[0].endpoint);
+  const [selectedRegion, setSelectedRegion] = useState(regions[0]);
 
   return (
     <>
@@ -25,7 +23,7 @@ const App = () => {
             />
           }
         >
-          <Route index element={<Home endpoint={endpoint} />} />
+          <Route index element={<Home endpoint={selectedRegion.endpoint} />} />
         </Route>
 
         {/* Individual Country Page */}
