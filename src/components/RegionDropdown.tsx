@@ -17,13 +17,9 @@ const RegionDropdown = ({selectedRegion, setSelectedRegion}: Props) => {
     >
       <Listbox.Button>{selectedRegion}</Listbox.Button>
       <Listbox.Options className='absolute left-0 bg-white'>
-        {regions.map((regionName) => (
-          <Listbox.Option key={regionName} value={regionName}>
-            {regionName === 'All' ? (
-              <Link to='/'>{regionName}</Link>
-            ) : (
-              <Link to={`/region/${regionName}`}>{regionName}</Link>
-            )}
+        {regions.map((region) => (
+          <Listbox.Option key={region.name} value={region.name}>
+            {region.name}
           </Listbox.Option>
         ))}
       </Listbox.Options>

@@ -3,9 +3,13 @@ import {baseUrl} from '../data/data';
 import CountryCard from '../components/CountryCard';
 import CountryList from '../components/CountryList';
 
-const Home = () => {
-  const urlAllCountries = `${baseUrl}/all`;
-  const {data, error, isLoading} = useAxiosFetch(urlAllCountries);
+interface Props {
+  endpoint: string;
+}
+
+const Home = ({endpoint}: Props) => {
+  const urlFull = baseUrl + endpoint;
+  const {data, error, isLoading} = useAxiosFetch(urlFull);
 
   return (
     <CountryList>

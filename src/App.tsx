@@ -9,7 +9,8 @@ import HomeLayout from './components/HomeLayout';
 import {regions} from './data/data';
 
 const App = () => {
-  const [selectedRegion, setSelectedRegion] = useState(regions[0]);
+  const [selectedRegion, setSelectedRegion] = useState(regions[0].name);
+  const [endpoint, setEndpoint] = useState(regions[0].endpoint);
 
   return (
     <>
@@ -24,21 +25,7 @@ const App = () => {
             />
           }
         >
-          <Route index element={<Home />} />
-        </Route>
-
-        {/* Individual Region Page */}
-        <Route
-          path='region'
-          element={
-            <HomeLayout
-              selectedRegion={selectedRegion}
-              setSelectedRegion={setSelectedRegion}
-            />
-          }
-        >
-          <Route index element={<NotFound />} />
-          <Route path=':regionId' element={<Region />} />
+          <Route index element={<Home endpoint={endpoint} />} />
         </Route>
 
         {/* Individual Country Page */}
