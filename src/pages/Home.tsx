@@ -14,9 +14,9 @@ const Home = ({url}: Props) => {
     <CountryList>
       {data &&
         data.map((countryData, idx) => {
-          if (idx === 0) {
-            console.log(countryData);
-          }
+          // if (idx === 0) {
+          //   console.log(countryData);
+          // }
           return <CountryCard key={idx} countryData={countryData} />;
         })}
     </CountryList>

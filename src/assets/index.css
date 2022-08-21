@@ -17,3 +17,13 @@
         @apply font-extrabold
     }
 }
+
+@layer utilities {
+    .country-title {
+        @apply font-extrabold
+    }
+
+    .country-description {
+        @apply font-normal ml-2;
+    }
+}
