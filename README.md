@@ -102,7 +102,7 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Chinh Do](https://www.doinby.co)
+- Website - [www.doinby.co](https://www.doinby.co)
 - Frontend Mentor - [@doinby](https://www.frontendmentor.io/profile/doinby)
 - Twitter - [@doinby](https://www.twitter.com/doinby)
 
