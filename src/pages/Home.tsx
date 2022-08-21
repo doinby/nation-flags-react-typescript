@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import useAxiosFetch from '../hooks/useAxiosFetch';
 import CountryCard from '../components/CountryCard';
-import CountryList from '../components/CountryList';
 
 interface Props {
   url: string;
@@ -11,7 +10,10 @@ const Home = ({url}: Props) => {
   const {data, error, isLoading} = useAxiosFetch(url);
 
   return (
-    <CountryList>
+    <section
+      id='country-list-section'
+      className='container grid grid-flow-row grid-cols-[repeat(auto-fill,_minmax(264px,_auto))] gap-16 justify-items-center'
+    >
       {data &&
         data.map((countryData, idx) => {
           // if (idx === 0) {
@@ -19,7 +21,7 @@ const Home = ({url}: Props) => {
           // }
           return <CountryCard key={idx} countryData={countryData} />;
         })}
-    </CountryList>
+    </section>
   );
 };
 
