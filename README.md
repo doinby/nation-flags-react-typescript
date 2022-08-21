@@ -1,4 +1,4 @@
-# Frontend Mentor - REST Countries API with color theme switcher solution
+# Frontend Mentor - REST Countries API Solution
 
 This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -14,7 +14,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
+<!-- - [Acknowledgments](#acknowledgments) -->
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -52,16 +52,14 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
+- [React](https://reactjs.org/) - Javascript Framework
+- [Typescript](https://www.typescriptlang.org/) -
+- [Tailwind](https://tailwindcss.com/)
+- [ReactRouter](https://reactrouter.com/)
+- [HeadlessUI](https://headlessui.com/)
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- CSS Flexbox, Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -85,7 +83,7 @@ const proudOfThisFunc = () => {
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+<!-- [The Markdown Guide](https://www.markdownguide.org/) -->
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 
@@ -104,14 +102,12 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Chinh Do](https://www.doinby.co)
+- Frontend Mentor - [@doinby](https://www.frontendmentor.io/profile/doinby)
+- Twitter - [@doinby](https://www.twitter.com/doinby)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
+<!-- ## Acknowledgments
 
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.** -->
