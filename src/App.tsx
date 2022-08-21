@@ -1,5 +1,5 @@
 import {Route, Routes} from 'react-router-dom';
-import CountryLayout from './components/CountryLayout';
+import CountryLayout from './components/Country/CountryLayout';
 import NotFound from './pages/404';
 import Country from './pages/Country';
 import Home from './pages/Home';
