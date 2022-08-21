@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import useAxiosFetch from '../hooks/useAxiosFetch';
-import {baseUrl} from '../data/data';
 import CountryCard from '../components/CountryCard';
 import CountryList from '../components/CountryList';
 

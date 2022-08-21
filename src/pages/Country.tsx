@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import {useParams} from 'react-router-dom';
 import {baseUrl} from '../data/data';
 import useAxiosFetch from '../hooks/useAxiosFetch';
