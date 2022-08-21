@@ -8,15 +8,17 @@ interface Props {
 }
 
 const Home = ({url}: Props) => {
-  console.log('url:', url);
   const {data, error, isLoading} = useAxiosFetch(url);
 
   return (
     <CountryList>
       {data &&
-        data.map((countryData, idx) => (
-          <CountryCard key={idx} countryData={countryData} />
-        ))}
+        data.map((countryData, idx) => {
+          if (idx === 0) {
+            console.log(countryData);
+          }
+          return <CountryCard key={idx} countryData={countryData} />;
+        })}
     </CountryList>
   );
 };
