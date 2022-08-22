@@ -7,7 +7,7 @@ interface Props {
 
 const Header = ({isDarkMode, setDarkMode}: Props) => {
   return (
-    <header className='flex justify-between shadow-md px-4 py-8'>
+    <header>
       <h1>Where in the world?</h1>
       <button
         className='flex gap-2 items-center'

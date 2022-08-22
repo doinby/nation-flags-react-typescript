@@ -10,7 +10,23 @@
 
 @layer base {
     html {
-        @apply text-sm bg-light-gray;
+        @apply h-full
+    }
+
+    body {
+        @apply text-sm bg-light-gray h-full;
+    }
+
+    #root {
+        @apply h-full flex flex-col;
+    }
+
+    header, footer {
+        @apply bg-white shadow-sm flex justify-between px-4 py-8 shrink-0
+    }
+
+    main {
+        @apply grow basis-auto
     }
 
     h1 {
