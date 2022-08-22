@@ -20,7 +20,7 @@ const CountryCard = ({countryData}: Props) => {
   } = countryData;
 
   return (
-    <button className='bg-[#FFF] shadow-sm flex flex-col items-start text-left'>
+    <button className='bg-[#FFF] shadow-sm flex flex-col items-start text-left mx-6 md:mx-0'>
       <Link to={'country/' + countryName}>
         <img src={flagUrl} alt={`Flag of ${countryName}`} />
         <div className='flex flex-col gap-2 px-8 py-8'>

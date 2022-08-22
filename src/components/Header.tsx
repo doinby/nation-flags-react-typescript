@@ -1,4 +1,5 @@
 import {Moon, Sun} from 'react-feather';
+import {Link} from 'react-router-dom';
 
 interface Props {
   isDarkMode: boolean;
@@ -8,7 +9,9 @@ interface Props {
 const Header = ({isDarkMode, setDarkMode}: Props) => {
   return (
     <header>
-      <h1>Where in the world?</h1>
+      <Link to='/'>
+        <h1>Where in the world?</h1>
+      </Link>
       <button
         className='flex gap-2 items-center'
         onClick={() => setDarkMode((prev: boolean) => !prev)}

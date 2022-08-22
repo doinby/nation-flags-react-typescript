@@ -6,7 +6,7 @@ interface Props {
 
 const SearchBar = ({setSearchQuery}: Props) => {
   return (
-    <div className='relative flex items-center'>
+    <div className='relative flex items-center md:w-[50%]'>
       <Search color='gray' size={18} className='absolute left-8' />
       <input
         placeholder='Search for country...'
