@@ -13,8 +13,12 @@
         @apply text-sm bg-light-gray;
     }
 
+    h1 {
+        @apply font-extrabold;
+    }
+
     h3 {
-        @apply font-extrabold
+        @apply font-extrabold text-xl
     }
 }
 

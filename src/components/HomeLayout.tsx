@@ -23,8 +23,11 @@ const HomeLayout = ({
   return (
     <>
       <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
-      <main className='flex flex-col items-center'>
-        <section id='nav-section' className='flex'>
+      <main className='flex flex-col items-center py-6 gap-12'>
+        <section
+          id='nav-section'
+          className='container px-4 flex flex-col md:flex-row w-full gap-6'
+        >
           <SearchBar setSearchQuery={setSearchQuery} />
           <RegionDropdown
             selectedRegion={selectedRegion}

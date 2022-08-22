@@ -1,5 +1,4 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMoon, faSun} from '@fortawesome/free-regular-svg-icons';
+import {Moon, Sun} from 'react-feather';
 
 interface Props {
   isDarkMode: boolean;
@@ -14,7 +13,8 @@ const Header = ({isDarkMode, setDarkMode}: Props) => {
         className='flex gap-2 items-center'
         onClick={() => setDarkMode((prev: boolean) => !prev)}
       >
-        <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} />
+        {/* <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} /> */}
+        {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
         <p>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</p>
       </button>
     </header>

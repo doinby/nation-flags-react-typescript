@@ -12,7 +12,7 @@ const Home = ({url}: Props) => {
   return (
     <section
       id='country-list-section'
-      className='container grid grid-flow-row grid-cols-[repeat(auto-fill,_minmax(264px,_auto))] gap-16 justify-items-center'
+      className='container grid grid-flow-row grid-cols-[repeat(auto-fill,_minmax(264px,_auto))] gap-12 justify-items-center px-[3.5rem]'
     >
       {data &&
         data.map((countryData, idx) => {

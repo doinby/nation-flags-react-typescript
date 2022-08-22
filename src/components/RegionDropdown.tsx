@@ -1,5 +1,6 @@
 import {Listbox} from '@headlessui/react';
 import {regions} from '../data/data';
+import {ChevronDown} from 'react-feather';
 
 interface Props {
   selectedRegion: {
@@ -24,8 +25,10 @@ const RegionDropdown = ({
       as='div'
       className='relative'
     >
-      <Listbox.Button>{selectedRegion.name}</Listbox.Button>
-      <Listbox.Options className='absolute left-0 bg-white'>
+      <Listbox.Button className='bg-white flex justify-between w-[15rem] py-[1.1rem] px-8 shadow-sm'>
+        {selectedRegion.name} <ChevronDown size={18} />
+      </Listbox.Button>
+      <Listbox.Options className='bg-white absolute left-0 flex flex-col gap-2 w-[15rem] mt-2 px-8 py-6 shadow-md'>
         {regions.map((region) => (
           <Listbox.Option key={region.name} value={region}>
             {region.name}
