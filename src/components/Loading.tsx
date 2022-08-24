@@ -1,6 +1,6 @@
 const Loading = () => {
   return (
-    <div className='grow flex place-items-center'>
+    <div className='grow flex place-items-center place-self-center'>
       <img src='/images/spinner.svg' alt='Loading...' className='h-12 mb-28' />
     </div>
   );
