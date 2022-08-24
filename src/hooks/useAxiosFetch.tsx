@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 const useAxiosFetch = (url: string) => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -12,7 +12,14 @@ const useAxiosFetch = (url: string) => {
       try {
         const res = await fetch(url);
         const jsonRes = await res.json();
-        setData(jsonRes);
+        if (res.ok) {
+          setData(jsonRes);
+          setError('');
+        } else {
+          setData([]);
+          setError('Oops... Something is wrong!');
+        }
+        // setData(jsonRes);
       } catch (err: any) {
         setError(err.message);
       } finally {

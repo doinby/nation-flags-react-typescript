@@ -33,7 +33,10 @@ const App = () => {
             element={
               <Home
                 url={
-                  searchQuery === '' ? baseUrl + '/all' : baseUrl + searchQuery
+                  // If searchQuery is blank, show all countries
+                  searchQuery === '/name/'
+                    ? baseUrl + '/all'
+                    : baseUrl + searchQuery
                 }
               />
             }

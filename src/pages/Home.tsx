@@ -8,6 +8,7 @@ interface Props {
 
 const Home = ({url}: Props) => {
   const {data, error, isLoading} = useAxiosFetch(url);
+  console.log('error:', error);
 
   return (
     <>
@@ -24,13 +25,18 @@ const Home = ({url}: Props) => {
           id='country-list-section'
           className='container grid grid-flow-row grid-cols-[repeat(auto-fill,_minmax(264px,_auto))] gap-12 justify-items-center'
         >
-          {data &&
+          {Array.isArray(data) && data.length > 1 ? (
             data.map((countryData, idx) => {
               // if (idx === 0) {
               //   console.log(countryData);
               // }
               return <CountryCard key={idx} countryData={countryData} />;
-            })}
+            })
+          ) : (
+            <div className='grow flex place-items-center'>
+              <p className='place-self-center'>{error}</p>
+            </div>
+          )}
         </section>
       )}
     </>
