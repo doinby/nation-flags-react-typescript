@@ -12,7 +12,7 @@ const CountryLayout = ({isDarkMode, setDarkMode}: Props) => {
   return (
     <>
       <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
-      <main className='container place-self-center flex flex-col py-6 gap-8 mx-6 md:mx-0'>
+      <main className='container place-self-center flex flex-col py-6 px-6 gap-8 mx-6 md:mx-0'>
         <Link to='/' className='btn-primary self-start flex items-center'>
           <ArrowLeft size={18} className='mr-2' />
           Back

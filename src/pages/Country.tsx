@@ -4,6 +4,7 @@ import {baseUrl} from '../data/data';
 import useAxiosFetch from '../hooks/useAxiosFetch';
 import ErrorMessage from '../components/ErrorMessage';
 import Loading from '../components/Loading';
+import Neighbors from '../components/Country/Neighbors';
 
 const Country = () => {
   const {countryId} = useParams();
@@ -12,7 +13,6 @@ const Country = () => {
   // console.log('url:', url);
   const {data, error, isLoading} = useAxiosFetch(url);
   const isDataValid = Array.isArray(data) && data.length > 0;
-  console.log('isDataValid:', isDataValid);
 
   const getCurrencies = (currencyObject: {}) => {
     const obj1: any = Object.values(currencyObject).map((obj2: any) => {
@@ -54,16 +54,17 @@ const Country = () => {
               region,
               subregion,
               flags: {png: flagUrl},
+              borders,
             } = country;
+
+            const hasNeighbor = borders !== undefined;
 
             return (
               <article
                 key={countryName}
-                className='flex flex-col md:flex-row gap-8'
+                className='flex flex-col md:grid md:grid-cols-3 gap-8'
               >
-                <div>
-                  <img src={flagUrl} alt={`Flag of ${countryName}`} />
-                </div>
+                <img src={flagUrl} alt={`Flag of ${countryName}`} />
                 <div className='flex flex-col gap-2'>
                   <h3>{countryName}</h3>
                   <p className='country-title'>
@@ -109,8 +110,17 @@ const Country = () => {
                     </span>
                   </p>
                 </div>
-                <div className=''>
-                  <p className='country-title'>Border Countries:</p>
+                <div className='col-span-3 flex flex-col gap-2'>
+                  <p className='country-title'>
+                    {hasNeighbor ? 'Border Countries: ' : 'Border Country: '}
+                  </p>
+                  {hasNeighbor ? (
+                    <Neighbors neighborList={borders} />
+                  ) : (
+                    <button className='btn-primary self-start' disabled>
+                      None
+                    </button>
+                  )}
                 </div>
               </article>
             );
