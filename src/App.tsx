@@ -44,12 +44,17 @@ const App = () => {
         </Route>
 
         {/* Individual Country Page */}
-        <Route path='country' element={<CountryLayout />}>
+        <Route
+          path='country'
+          element={
+            <CountryLayout isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+          }
+        >
           <Route index element={<NotFound />} />
           <Route path=':countryId' element={<Country />} />
         </Route>
 
-        {/* Error Page */}
+        {/* 404 Page */}
         <Route path='*' element={<NotFound />} />
       </Routes>
     </>

@@ -1,4 +1,5 @@
 import CountryCard from './CountryCard';
+import ErrorMessage from './ErrorMessage';
 
 interface Props {
   data: any;
@@ -6,17 +7,12 @@ interface Props {
 }
 
 const CountryCards = ({data, error}: Props) => {
-  const isDataValid = Array.isArray(data) && data.length > 1;
-  const errorMessage = (
-    <div className='grow flex place-items-center'>
-      <p className='font-bold'>{error}</p>
-    </div>
-  );
+  const isDataValid = Array.isArray(data) && data.length > 0;
 
   return (
     <>
       {!isDataValid ? (
-        errorMessage
+        <ErrorMessage error={error} />
       ) : (
         <section className='container grid grid-flow-row grid-cols-[repeat(auto-fill,_minmax(264px,_auto))] gap-12 justify-items-center'>
           {data.map((countryData, idx) => {

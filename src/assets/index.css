@@ -38,12 +38,18 @@
     }
 }
 
+@layer components {
+    .btn-primary {
+        @apply px-10 py-2 shadow-sm bg-white
+    }
+}
+
 @layer utilities {
     .country-title {
-        @apply font-extrabold
+        @apply font-semibold
     }
 
     .country-description {
-        @apply font-normal ml-2;
+        @apply font-light ml-2;
     }
 }
