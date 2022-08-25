@@ -6,7 +6,7 @@ interface Props {
 
 const Footer = ({theme}: Props) => {
   return (
-    <footer className='bg-white dark:bg-dark-blue dark:text-white justify-center gap-8'>
+    <footer className='bg-white dark:bg-dark-blue dark:text-white justify-center gap-x-8 gap-y-2 flex-col md:flex-row'>
       <FooterLink
         theme={theme}
         url='https://linkedin.com/in/doinby/'

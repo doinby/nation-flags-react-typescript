@@ -2,6 +2,7 @@ import {Outlet} from 'react-router-dom';
 import Header from '../Header';
 import {ArrowLeft} from 'react-feather';
 import {Link} from 'react-router-dom';
+import Footer from '../Footer';
 
 interface Props {
   theme: string;
@@ -19,6 +20,7 @@ const CountryLayout = ({theme, setTheme}: Props) => {
         </Link>
         <Outlet />
       </main>
+      <Footer theme={theme} />
     </>
   );
 };
