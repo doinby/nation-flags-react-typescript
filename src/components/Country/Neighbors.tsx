@@ -1,7 +1,3 @@
-import {Link} from 'react-router-dom';
-import useAxiosFetch from '../../hooks/useAxiosFetch';
-import {baseUrl} from '../../data/data';
-import {useState} from 'react';
 import Neighbor from './Neighbor';
 
 interface Props {
