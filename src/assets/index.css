@@ -14,7 +14,7 @@
     }
 
     body {
-        @apply text-sm bg-light-gray h-full;
+        @apply text-sm h-full bg-light-gray dark:bg-darker-blue dark:text-white;
     }
 
     #root {
@@ -22,7 +22,7 @@
     }
 
     header, footer {
-        @apply bg-white shadow-sm flex justify-between px-4 py-8 shrink-0
+        @apply  shadow-sm flex justify-between px-4 py-8 shrink-0
     }
 
     main {
@@ -40,7 +40,7 @@
 
 @layer components {
     .btn-primary {
-        @apply px-10 py-2 shadow-sm bg-white
+        @apply px-10 py-2 shadow-sm bg-white dark:bg-dark-blue
     }
 }
 

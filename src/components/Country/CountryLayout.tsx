@@ -4,14 +4,14 @@ import {ArrowLeft} from 'react-feather';
 import {Link} from 'react-router-dom';
 
 interface Props {
-  isDarkMode: boolean;
-  setDarkMode: any;
+  theme: string;
+  setTheme: any;
 }
 
-const CountryLayout = ({isDarkMode, setDarkMode}: Props) => {
+const CountryLayout = ({theme, setTheme}: Props) => {
   return (
     <>
-      <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+      <Header theme={theme} setTheme={setTheme} />
       <main className='container place-self-center flex flex-col py-6 px-6 gap-8 mx-6 md:mx-0'>
         <Link to='/' className='btn-primary self-start flex items-center'>
           <ArrowLeft size={18} className='mr-2' />

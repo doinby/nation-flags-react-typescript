@@ -3,14 +3,35 @@ import CountryLayout from './components/Country/CountryLayout';
 import NotFound from './pages/404';
 import Country from './pages/Country';
 import Home from './pages/Home';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import HomeLayout from './components/HomeLayout';
 import {baseUrl, regions} from './data/data';
 
 const App = () => {
   const [selectedRegion, setSelectedRegion] = useState(regions[0]);
-  const [isDarkMode, setDarkMode] = useState(false);
   const [searchQuery, setSearchQuery] = useState(selectedRegion.endpoint);
+
+  const [theme, setTheme] = useState(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      return 'dark';
+    } else {
+      return 'light';
+    }
+  });
+
+  useEffect(() => {
+    const rootElement = document.getElementsByTagName('html')[0];
+    if (theme === 'light') {
+      rootElement.classList.remove('dark');
+    } else {
+      rootElement.classList.add('dark');
+    }
+    localStorage.theme = theme;
+  }, [theme]);
 
   return (
     <>
@@ -22,9 +43,9 @@ const App = () => {
             <HomeLayout
               selectedRegion={selectedRegion}
               setSelectedRegion={setSelectedRegion}
-              isDarkMode={isDarkMode}
-              setDarkMode={setDarkMode}
               setSearchQuery={setSearchQuery}
+              theme={theme}
+              setTheme={setTheme}
             />
           }
         >
@@ -46,9 +67,7 @@ const App = () => {
         {/* Individual Country Page */}
         <Route
           path='country'
-          element={
-            <CountryLayout isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
-          }
+          element={<CountryLayout theme={theme} setTheme={setTheme} />}
         >
           <Route index element={<NotFound />} />
           <Route path=':countryId' element={<Country />} />

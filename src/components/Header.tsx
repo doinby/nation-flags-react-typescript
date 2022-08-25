@@ -2,19 +2,22 @@ import {Moon, Sun} from 'react-feather';
 import {Link} from 'react-router-dom';
 
 interface Props {
-  isDarkMode: boolean;
-  setDarkMode: any;
+  theme: string;
+  setTheme: any;
 }
 
-const Header = ({isDarkMode, setDarkMode}: Props) => {
+const Header = ({theme, setTheme}: Props) => {
+  const isDarkMode = theme === 'dark' ? true : false;
   return (
-    <header>
+    <header className='bg-white dark:bg-dark-blue dark:text-white'>
       <Link to='/'>
         <h1>Where in the world?</h1>
       </Link>
       <button
         className='flex gap-2 items-center'
-        onClick={() => setDarkMode((prev: boolean) => !prev)}
+        onClick={() =>
+          theme === 'light' ? setTheme('dark') : setTheme('light')
+        }
       >
         {/* <FontAwesomeIcon icon={isDarkMode ? faSun : faMoon} /> */}
         {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}

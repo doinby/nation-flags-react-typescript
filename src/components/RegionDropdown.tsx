@@ -25,12 +25,16 @@ const RegionDropdown = ({
       as='div'
       className='relative w-44'
     >
-      <Listbox.Button className='bg-white flex justify-between w-full py-[1.1rem] pl-8 pr-6 shadow-sm'>
+      <Listbox.Button className='bg-white dark:bg-dark-blue flex justify-between w-full py-[1.1rem] pl-8 pr-6 shadow-sm'>
         {selectedRegion.name} <ChevronDown size={18} />
       </Listbox.Button>
-      <Listbox.Options className='bg-white absolute left-0 flex flex-col gap-2 mt-2 px-8 py-6 shadow-md w-full'>
+      <Listbox.Options className='bg-white dark:bg-dark-blue absolute left-0 mt-2 flex flex-col shadow-md w-full'>
         {regions.map((region) => (
-          <Listbox.Option key={region.name} value={region}>
+          <Listbox.Option
+            key={region.name}
+            value={region}
+            className='cursor-pointer hover:bg-light-gray hover:dark:bg-darker-blue px-8 py-3'
+          >
             {region.name}
           </Listbox.Option>
         ))}

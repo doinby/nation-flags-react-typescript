@@ -8,21 +8,21 @@ interface Props {
     name: string;
   };
   setSelectedRegion: any;
-  isDarkMode: boolean;
-  setDarkMode: any;
+  theme: string;
+  setTheme: any;
   setSearchQuery: any;
 }
 
 const HomeLayout = ({
   selectedRegion,
   setSelectedRegion,
-  isDarkMode,
-  setDarkMode,
+  theme,
+  setTheme,
   setSearchQuery,
 }: Props) => {
   return (
     <>
-      <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+      <Header theme={theme} setTheme={setTheme} />
       <main className='flex flex-col items-center py-6 gap-12 mx-6 md:mx-0'>
         <section
           id='nav-section'
