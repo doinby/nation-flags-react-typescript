@@ -12,6 +12,7 @@ const App = () => {
   const [searchQuery, setSearchQuery] = useState(selectedRegion.endpoint);
 
   const [theme, setTheme] = useState(() => {
+    // On page load, check if localStorage has preference for light or dark
     if (
       localStorage.theme === 'dark' ||
       (!('theme' in localStorage) &&
@@ -23,6 +24,7 @@ const App = () => {
     }
   });
 
+  // Add or remove dark class when theme variable changes
   useEffect(() => {
     const rootElement = document.getElementsByTagName('html')[0];
     if (theme === 'light') {
