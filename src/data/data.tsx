@@ -26,5 +26,3 @@ export const regions = [
     endpoint: '/region/asia',
   },
 ];
-
-export const theme = localStorage.theme;
