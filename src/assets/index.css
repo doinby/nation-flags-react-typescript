@@ -22,7 +22,7 @@
     }
 
     header, footer {
-        @apply  shadow-sm flex justify-between px-4 py-8 shrink-0
+        @apply  shadow-sm flex px-4 py-8 shrink-0
     }
 
     main {
@@ -41,6 +41,10 @@
 @layer components {
     .btn-primary {
         @apply px-10 py-2 shadow-sm bg-white dark:bg-dark-blue
+    }
+
+    .btn-text {
+        @apply cursor-pointer underline underline-offset-2
     }
 }
 

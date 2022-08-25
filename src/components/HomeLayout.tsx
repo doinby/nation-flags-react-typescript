@@ -2,6 +2,7 @@ import SearchBar from '../components/SearchBar';
 import RegionDropdown from '../components/RegionDropdown';
 import {Outlet} from 'react-router-dom';
 import Header from './Header';
+import Footer from './Footer';
 
 interface Props {
   selectedRegion: {
@@ -37,7 +38,7 @@ const HomeLayout = ({
         </section>
         <Outlet />
       </main>
-      <footer>Footer</footer>
+      <Footer theme={theme} />
     </>
   );
 };

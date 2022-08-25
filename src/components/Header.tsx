@@ -9,7 +9,7 @@ interface Props {
 const Header = ({theme, setTheme}: Props) => {
   const isDarkMode = theme === 'dark' ? true : false;
   return (
-    <header className='bg-white dark:bg-dark-blue dark:text-white'>
+    <header className='bg-white dark:bg-dark-blue dark:text-white justify-between'>
       <Link to='/'>
         <h1>Where in the world?</h1>
       </Link>

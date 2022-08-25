@@ -97,11 +97,13 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [React Typescript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example/) - Great code example of declaring common React types
 - [Ultimate React Router 6 Guide](https://blog.webdevsimplified.com/2022-07/react-router/) - I used this to learn how to dynamically route individual country page, what `useParam()` does, how to use `<Link>` and `<Outlet />`
+- [Tailwind Dark Mode Doc](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) - Tailwind's dark mode is so much easier to implement compares to MUI 🤩
 
 ## Author
 
 - Website - [www.doinby.co](https://www.doinby.co)
 - Frontend Mentor - [@doinby](https://www.frontendmentor.io/profile/doinby)
+- Linkedin - [doinby](https://www.linkedin.com/in/doinby/)
 - Twitter - [@doinby](https://www.twitter.com/doinby)
 
 <!-- ## Acknowledgments
