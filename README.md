@@ -1,7 +1,5 @@
 # Frontend Mentor - REST Countries API Solution
 
-This is a solution to the [REST Countries API with color theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -19,6 +17,10 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
+
+Nation Flags is a ReactJS app that helps users learn crucial information about a country. Details such as population, capital, native name and national flag are organized in a clear and concise manner.
+
+The proposal of this app and figma design file was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). All country data were fetched via[REST Countries API](https://restcountries.com/).
 
 ### The challenge
 
