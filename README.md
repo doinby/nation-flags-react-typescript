@@ -20,7 +20,7 @@
 
 Nation Flags is a ReactJS app that helps users learn crucial information about a country. Details such as population, capital, native name and national flag are organized in a clear and concise manner.
 
-The proposal of this app and figma design file was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). All country data were fetched via[REST Countries API](https://restcountries.com/).
+The proposal of this app and figma design file was provided by [Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). All country data were fetched via [REST Countries API](https://restcountries.com/).
 
 ### The challenge
 
@@ -35,20 +35,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Screenshot 1](./public/images/screenshot-full-light.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Live Site](https://nation-flags.co/)
+- [Github Repository](https://github.com/doinby/nation-flags-react-typescript)
+- [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/nation-flags-reactjs-typescript-tailwindcss-lznt5b_nGD)
 
 ## My process
 
@@ -86,8 +79,6 @@ const proudOfThisFunc = () => {
 ```
 
 <!-- [The Markdown Guide](https://www.markdownguide.org/) -->
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
