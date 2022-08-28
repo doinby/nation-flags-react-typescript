@@ -7,14 +7,12 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#built-with)
+  <!-- - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [Continued development](#continued-development) -->
   - [Useful resources](#useful-resources)
 - [Author](#author)
 <!-- - [Acknowledgments](#acknowledgments) -->
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -45,7 +43,7 @@ Users should be able to:
 
 ## My process
 
-### Built with
+<!-- ### Built with
 
 - [React](https://reactjs.org/) - Javascript Framework
 - [Typescript](https://www.typescriptlang.org/) -
@@ -76,15 +74,15 @@ To see how you can add code snippets, see below:
 const proudOfThisFunc = () => {
   console.log('🎉');
 };
-```
+``` -->
 
 <!-- [The Markdown Guide](https://www.markdownguide.org/) -->
 
-### Continued development
+<!-- ### Continued development
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.** -->
 
 ### Useful resources
 
