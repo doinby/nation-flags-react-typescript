@@ -24,7 +24,7 @@ const HomeLayout = ({
   return (
     <>
       <Header theme={theme} setTheme={setTheme} />
-      <main className='flex flex-col items-center py-6 gap-12 mx-6 md:mx-0'>
+      <main className='flex flex-col items-center py-6 gap-12 mx-6'>
         <section
           id='nav-section'
           className='container flex flex-col md:flex-row md:justify-between w-full gap-6'

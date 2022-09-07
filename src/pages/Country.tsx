@@ -62,65 +62,76 @@ const Country = () => {
             return (
               <article
                 key={countryName}
-                className='flex flex-col md:grid md:grid-cols-3 gap-8'
+                className='flex flex-col md:flex-row md:items-center gap-8'
               >
-                <img src={flagUrl} alt={`Flag of ${countryName}`} />
-                <div className='flex flex-col gap-2'>
-                  <h3>{countryName}</h3>
-                  <p className='country-title'>
-                    Native Name:
-                    <span className='country-description'>
-                      {getOfficialName(nativeName)}
-                    </span>
-                  </p>
-                  <p className='country-title'>
-                    Population:
-                    <span className='country-description'>{population}</span>
-                  </p>
-                  <p className='country-title'>
-                    Region:<span className='country-description'>{region}</span>
-                  </p>
-                  <p className='country-title'>
-                    Sub Region:
-                    <span className='country-description'>{subregion}</span>
-                  </p>
-                  <p className='country-title'>
-                    Capital:
-                    <span className='country-description'>{capital}</span>
-                  </p>
-                </div>
+                <img
+                  src={flagUrl}
+                  alt={`Flag of ${countryName}`}
+                  className='w-full object-contain md:max-w-[560px]'
+                />
+                <div className='w-full flex flex-col items-start text-left md:grid md:grid-cols-2 gap-x-2 gap-y-4'>
+                  <h3 className='col-span-2'>{countryName}</h3>
+                  <div className='flex flex-col gap-2'>
+                    <p className='country-title'>
+                      Native Name:
+                      <span className='country-description'>
+                        {getOfficialName(nativeName)}
+                      </span>
+                    </p>
+                    <p className='country-title'>
+                      Population:
+                      <span className='country-description'>{population}</span>
+                    </p>
+                    <p className='country-title'>
+                      Region:
+                      <span className='country-description'>{region}</span>
+                    </p>
+                    <p className='country-title'>
+                      Sub Region:
+                      <span className='country-description'>{subregion}</span>
+                    </p>
+                    <p className='country-title'>
+                      Capital:
+                      <span className='country-description'>{capital}</span>
+                    </p>
+                  </div>
 
-                <div className='flex flex-col gap-2'>
-                  <p className='country-title'>
-                    Top Level Domain:
-                    <span className='country-description'>
-                      {topLevelDomain}
-                    </span>
-                  </p>
-                  <p className='country-title'>
-                    {isMultiCurrencies(currencies) ? 'Currencies' : 'Currency'}:
-                    <span className='country-description'>
-                      {getCurrencies(currencies)}
-                    </span>
-                  </p>
-                  <p className='country-title'>
-                    {isMultiLanguages(languages) ? 'Languages' : 'Language'}:
-                    <span className='country-description'>
-                      {getLanguages(languages)}
-                    </span>
-                  </p>
-                </div>
-                <div className='col-span-3 flex flex-col gap-2'>
-                  <p className='country-title'>
-                    {hasNeighbor ? 'Border Countries: ' : 'Border Country: '}
-                  </p>
-                  {hasNeighbor ? (
-                    <Neighbors neighborList={borders} />
-                  ) : (
-                    <button className='btn-primary self-start' disabled>
-                      None
-                    </button>
-                  )}
+                  <div className='flex flex-col gap-2'>
+                    <p className='country-title'>
+                      Top Level Domain:
+                      <span className='country-description'>
+                        {topLevelDomain}
+                      </span>
+                    </p>
+                    <p className='country-title'>
+                      {isMultiCurrencies(currencies)
+                        ? 'Currencies'
+                        : 'Currency'}
+                      :
+                      <span className='country-description'>
+                        {getCurrencies(currencies)}
+                      </span>
+                    </p>
+                    <p className='country-title'>
+                      {isMultiLanguages(languages) ? 'Languages' : 'Language'}:
+                      <span className='country-description'>
+                        {getLanguages(languages)}
+                      </span>
+                    </p>
+                  </div>
+
+                  <div className='col-span-2 flex flex-col md:flex-row md:items-center gap-2'>
+                    <p className='country-title md:mr-2'>
+                      {hasNeighbor ? 'Border Countries: ' : 'Border Country: '}
+                    </p>
+                    {hasNeighbor ? (
+                      <Neighbors neighborList={borders} />
+                    ) : (
+                      <button className='btn-primary self-start w-32' disabled>
+                        None
+                      </button>
+                    )}
+                  </div>
                 </div>
               </article>
             );
