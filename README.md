@@ -33,7 +33,9 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot 1](./public/images/screenshot-full-light.png)
+![Screenshot 1](./public/images/screenshot-home-light.png)
+![Screenshot 2](./public/images/screenshot-home-dark.png)
+![Screenshot 3](./public/images/screenshot-country-light.png)
 
 ### Links
 
