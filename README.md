@@ -47,8 +47,8 @@ Users should be able to:
 
 ### Built with
 
-- [React](https://reactjs.org/) - Javascript Framework
-- [Typescript](https://www.typescriptlang.org/) -
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Tailwind](https://tailwindcss.com/)
 - [ReactRouter](https://reactrouter.com/)
 - [HeadlessUI](https://headlessui.com/)
