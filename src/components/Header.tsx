@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 interface Props {
   theme: string;
-  setTheme: any;
+  setTheme: (mode: string) => void;
 }
 
 const Header = ({theme, setTheme}: Props) => {

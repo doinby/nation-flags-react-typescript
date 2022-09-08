@@ -10,8 +10,8 @@ interface Props {
   };
   setSelectedRegion: any;
   theme: string;
-  setTheme: any;
-  setSearchQuery: any;
+  setTheme: (mode: string) => void;
+  setSearchQuery: (query: string) => void;
 }
 
 const HomeLayout = ({

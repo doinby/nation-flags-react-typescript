@@ -1,7 +1,7 @@
 import {Search} from 'react-feather';
 
 interface Props {
-  setSearchQuery: any;
+  setSearchQuery: (query: string) => void;
 }
 
 const SearchBar = ({setSearchQuery}: Props) => {

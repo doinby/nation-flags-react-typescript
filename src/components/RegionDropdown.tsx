@@ -6,8 +6,8 @@ interface Props {
   selectedRegion: {
     name: string;
   };
-  setSelectedRegion: any;
-  setSearchQuery: any;
+  setSelectedRegion: (selectedRegion: string) => void;
+  setSearchQuery: (query: string) => void;
 }
 
 const RegionDropdown = ({
